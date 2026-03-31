@@ -2,8 +2,9 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Crown, Megaphone, Globe, Package, Star, Zap, ChevronDown, MapPin } from 'lucide-react'
+import { Crown, Megaphone, Globe, Package, Star, Zap, ChevronDown } from 'lucide-react'
 import { Input, Select, Textarea } from '@/components/ui/FormInput'
+import { GlobePulse } from '@/components/ui/cobe-globe-pulse'
 
 const benefits = [
   { icon: Crown, title: 'Exclusive Territory Rights', desc: 'Secure exclusive distribution rights in your region with full team support.' },
@@ -22,16 +23,6 @@ const faqs = [
   { q: 'How do you handle customs documentation?', a: 'We provide all necessary documentation, but the distributor is responsible for local customs clearance.' },
 ]
 
-const mapDots = [
-  { city: 'Delhi', x: '42%', y: '28%' },
-  { city: 'Mumbai', x: '35%', y: '52%' },
-  { city: 'Bangalore', x: '42%', y: '68%' },
-  { city: 'Kolkata', x: '61%', y: '40%' },
-  { city: 'Chennai', x: '48%', y: '72%' },
-  { city: 'Pune', x: '37%', y: '55%' },
-  { city: 'Ahmedabad', x: '30%', y: '42%' },
-  { city: 'Jaipur', x: '36%', y: '32%' },
-]
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false)
@@ -136,57 +127,70 @@ export default function BecomeDistributorPage() {
         </div>
       </section>
 
-      {/* India Map */}
+      {/* Interactive Globe */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#0D0D0D]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-oswald text-3xl text-white text-center uppercase mb-10">
-            Our Expansion in <span className="text-[#D4A843]">India</span>
-          </h2>
-          <div className="relative bg-[#141414] border border-[#2A2A2A] rounded-lg p-8 h-80 overflow-hidden">
-            {/* India outline (SVG shape placeholder) */}
-            <div
-              className="absolute inset-4 rounded-lg opacity-10 border-2 border-[#D4A843]"
-              style={{
-                clipPath: 'polygon(42% 0%, 48% 2%, 55% 5%, 70% 8%, 80% 20%, 85% 30%, 80% 45%, 75% 55%, 65% 65%, 60% 75%, 55% 85%, 48% 95%, 45% 100%, 38% 90%, 32% 75%, 28% 60%, 22% 48%, 15% 38%, 20% 25%, 28% 15%, 35% 8%)',
-              }}
-            />
-            <div
-              className="absolute inset-4 opacity-5"
-              style={{
-                clipPath: 'polygon(42% 0%, 48% 2%, 55% 5%, 70% 8%, 80% 20%, 85% 30%, 80% 45%, 75% 55%, 65% 65%, 60% 75%, 55% 85%, 48% 95%, 45% 100%, 38% 90%, 32% 75%, 28% 60%, 22% 48%, 15% 38%, 20% 25%, 28% 15%, 35% 8%)',
-                backgroundColor: '#D4A843',
-              }}
-            />
+        <div className="max-w-5xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-oswald text-3xl text-white text-center uppercase mb-3"
+          >
+            Our Expansion in <span className="text-[#D4A843]">Asia</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="font-inter text-sm text-[#666] text-center mb-10"
+          >
+            Drag to explore our global distribution network
+          </motion.p>
 
-            {/* City dots */}
-            {mapDots.map((dot) => (
-              <div
-                key={dot.city}
-                className="absolute flex flex-col items-center group"
-                style={{ left: dot.x, top: dot.y }}
-              >
-                <div className="w-3 h-3 rounded-full bg-[#D4A843] border-2 border-black shadow-lg shadow-[#D4A843]/30" />
-                <span className="font-inter text-[9px] text-[#D4A843] mt-0.5 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 px-1 rounded">
-                  {dot.city}
-                </span>
-              </div>
-            ))}
+          <div className="flex flex-col lg:flex-row items-center gap-10">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="w-full max-w-sm lg:max-w-md mx-auto"
+            >
+              <GlobePulse className="w-full" />
+            </motion.div>
 
-            {/* Legend */}
-            <div className="absolute bottom-4 right-4 flex flex-col gap-1.5 text-right">
-              <div className="flex items-center gap-1.5 justify-end">
-                <span className="font-inter text-[9px] text-[#B0B0B0]">Current Coverage</span>
-                <div className="w-2.5 h-2.5 rounded-full bg-[#D4A843]" />
-              </div>
-              <div className="flex items-center gap-1.5 justify-end">
-                <span className="font-inter text-[9px] text-[#B0B0B0]">Growth Areas</span>
-                <div className="w-2.5 h-2.5 rounded-full bg-[#00D4FF]" />
-              </div>
-            </div>
-            <p className="absolute bottom-4 left-4 font-inter text-[9px] text-[#555]">
-              We are actively seeking partners in key growth areas to meet high demand.
-              Click on a dot to learn more.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex-1 space-y-4"
+            >
+              <h3 className="font-oswald text-xl text-white uppercase tracking-wide">
+                Active Markets
+              </h3>
+              {[
+                { city: 'Mumbai', country: 'India', status: 'HQ & Warehouse', color: '#D4A843' },
+                { city: 'Delhi', country: 'India', status: 'Distributor', color: '#D4A843' },
+                { city: 'Bangalore', country: 'India', status: 'Distributor', color: '#D4A843' },
+                { city: 'Singapore', country: 'Southeast Asia', status: 'Expanding', color: '#00D4FF' },
+                { city: 'Dubai', country: 'Middle East', status: 'Expanding', color: '#00D4FF' },
+                { city: 'Tokyo', country: 'Japan', status: 'Coming Soon', color: '#666' },
+              ].map((loc) => (
+                <div key={loc.city} className="flex items-center justify-between py-2 border-b border-[#1A1A1A]">
+                  <div>
+                    <span className="font-inter text-sm text-white">{loc.city}</span>
+                    <span className="font-inter text-xs text-[#555] ml-2">{loc.country}</span>
+                  </div>
+                  <span
+                    className="font-inter text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-sm border"
+                    style={{ color: loc.color, borderColor: `${loc.color}40` }}
+                  >
+                    {loc.status}
+                  </span>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>

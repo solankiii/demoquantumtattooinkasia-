@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import SectionHeading from '@/components/ui/SectionHeading'
 
 const categories = [
@@ -10,35 +11,35 @@ const categories = [
     slug: 'gold-label',
     desc: 'EU REACH Compliant',
     color: '#D4A843',
-    gradient: 'from-[#D4A843]/20 to-[#8B6914]/5',
+    image: '/images/categories/gold-label.jpg',
   },
   {
     name: 'Originals',
     slug: 'originals',
     desc: 'The Classic Lineup',
     color: '#00D4FF',
-    gradient: 'from-[#00D4FF]/15 to-[#006680]/5',
+    image: '/images/categories/originals.jpg',
   },
   {
     name: 'Gray Wash',
     slug: 'gray-wash',
     desc: 'Shading Perfected',
     color: '#808080',
-    gradient: 'from-[#808080]/20 to-[#303030]/5',
+    image: '/images/categories/gray-wash.jpg',
   },
   {
     name: 'Aftercare',
     slug: 'aftercare',
     desc: 'Heal & Protect',
     color: '#25D366',
-    gradient: 'from-[#25D366]/15 to-[#0A5A2A]/5',
+    image: '/images/categories/aftercare.jpg',
   },
   {
     name: 'Mixing Solutions',
     slug: 'mixing-solutions',
     desc: 'Holy Water & More',
     color: '#B0B0B0',
-    gradient: 'from-[#B0B0B0]/10 to-[#2A2A2A]/5',
+    image: '/images/categories/mixing-solutions.jpg',
   },
 ]
 
@@ -67,47 +68,43 @@ export default function CategoryGrid() {
             >
               <Link href={`/shop?category=${cat.slug}`} className="block group">
                 <div
-                  className={`h-64 rounded-lg bg-gradient-to-b ${cat.gradient} border border-[#2A2A2A] group-hover:border-opacity-60 transition-all duration-300 relative overflow-hidden flex flex-col items-center justify-center`}
+                  className="h-64 rounded-lg border overflow-hidden relative transition-all duration-300"
                   style={{ borderColor: `${cat.color}30` }}
                 >
-                  {/* Glow */}
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{ background: `radial-gradient(ellipse at center, ${cat.color}15 0%, transparent 70%)` }}
+                  {/* Real image */}
+                  <Image
+                    src={cat.image}
+                    alt={cat.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="224px"
                   />
 
-                  {/* Bottle icon */}
-                  <div className="relative flex flex-col items-center mb-4">
-                    <div
-                      className="w-10 h-20 rounded-t-full rounded-b-md border border-opacity-40 relative overflow-hidden"
-                      style={{ borderColor: cat.color }}
-                    >
-                      <div className="absolute inset-0 opacity-20" style={{ backgroundColor: cat.color }} />
-                      <div className="absolute inset-x-0 top-0 h-full flex items-center justify-center">
-                        <span className="font-oswald text-[7px] text-white text-center px-1 uppercase opacity-60">
-                          QUANTUM
-                        </span>
-                      </div>
-                    </div>
-                    <div className="w-8 h-4 rounded-t-md" style={{ backgroundColor: cat.color }} />
-                  </div>
+                  {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
 
-                  {/* Name */}
-                  <div className="text-center px-3">
+                  {/* Hover glow */}
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-300"
+                    style={{ background: `radial-gradient(ellipse at center, ${cat.color}40 0%, transparent 70%)` }}
+                  />
+
+                  {/* Text */}
+                  <div className="absolute bottom-0 inset-x-0 p-4 text-center">
                     <h3
                       className="font-oswald text-base uppercase tracking-wider group-hover:text-white transition-colors"
                       style={{ color: cat.color }}
                     >
                       {cat.name}
                     </h3>
-                    <p className="font-inter text-xs text-[#666] mt-1">{cat.desc}</p>
+                    <p className="font-inter text-xs text-[#888] mt-0.5">{cat.desc}</p>
                   </div>
 
                   {/* Explore tag */}
-                  <div className="absolute bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
                     <span
-                      className="font-inter text-[10px] uppercase tracking-widest px-3 py-1 rounded-sm border"
-                      style={{ color: cat.color, borderColor: `${cat.color}40` }}
+                      className="font-inter text-[9px] uppercase tracking-widest px-2 py-1 rounded-sm border backdrop-blur-sm"
+                      style={{ color: cat.color, borderColor: `${cat.color}60`, backgroundColor: 'rgba(0,0,0,0.6)' }}
                     >
                       Explore →
                     </span>
