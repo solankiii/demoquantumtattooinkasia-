@@ -2,23 +2,32 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MessageCircle, ChevronRight } from 'lucide-react'
 import TrustBadges from '@/components/ui/TrustBadges'
+
+const heroProducts = [
+  { src: '/images/products/07_Nuclear_Green.webp', alt: 'Nuclear Green', delay: 0, rotate: '-6deg', x: '0%', y: '5%', scale: 1.05 },
+  { src: '/images/products/09_Crimson_Red.jpg',    alt: 'Crimson Red',   delay: 0.1, rotate: '4deg',  x: '30%', y: '-5%', scale: 1.1 },
+  { src: '/images/products/11_Royal_Blue.jpg',     alt: 'Royal Blue',    delay: 0.2, rotate: '-3deg', x: '60%', y: '10%', scale: 1.0 },
+  { src: '/images/products/15_Sunburst_Yellow.jpeg', alt: 'Sunburst Yellow', delay: 0.3, rotate: '6deg', x: '18%', y: '52%', scale: 0.9 },
+  { src: '/images/products/14_Violet_Purple.jpg',  alt: 'Violet Purple', delay: 0.15, rotate: '-5deg', x: '48%', y: '48%', scale: 0.95 },
+]
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0A0A0A]">
-      {/* Background artist image overlay */}
+      {/* Background glow */}
       <div
         className="absolute inset-0 z-0"
         style={{
           background: `
-            radial-gradient(ellipse at 70% 50%, rgba(212, 168, 67, 0.05) 0%, transparent 60%),
+            radial-gradient(ellipse at 70% 50%, rgba(212, 168, 67, 0.07) 0%, transparent 60%),
             radial-gradient(ellipse at 30% 80%, rgba(0, 212, 255, 0.03) 0%, transparent 50%)
           `,
         }}
       />
-      {/* Subtle grid pattern */}
+      {/* Subtle grid */}
       <div
         className="absolute inset-0 z-0 opacity-[0.03]"
         style={{
@@ -27,43 +36,55 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Right side — decorative ink bottle cluster */}
+      {/* Right side — real product images */}
       <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block z-0">
-        <div className="absolute inset-0 hero-overlay" />
-        <div
-          className="w-full h-full opacity-20"
-          style={{
-            background: `
-              radial-gradient(ellipse at 60% 50%, rgba(212, 168, 67, 0.3) 0%, transparent 50%),
-              linear-gradient(180deg, #0A0A0A 0%, #1A1200 40%, #0A0A0A 100%)
-            `,
-          }}
-        />
-        {/* Decorative bottles */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-30">
-          <div className="relative w-64 h-64">
-            {[
-              { color: '#DC143C', x: 0, y: 0, delay: 0 },
-              { color: '#4169E1', x: 70, y: -20, delay: 0.1 },
-              { color: '#39FF14', x: -60, y: 30, delay: 0.2 },
-              { color: '#D4A843', x: 30, y: 40, delay: 0.3 },
-            ].map(({ color, x, y, delay }, i) => (
-              <div
+        {/* Edge fade */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-transparent to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/60 via-transparent to-[#0A0A0A]/60 z-10" />
+
+        {/* Product image cluster */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="relative w-[480px] h-[520px]">
+            {heroProducts.map((p, i) => (
+              <motion.div
                 key={i}
+                initial={{ opacity: 0, y: 40, rotate: 0 }}
+                animate={{ opacity: 1, y: 0, rotate: p.rotate }}
+                transition={{ duration: 0.8, delay: p.delay, ease: 'easeOut' }}
                 className="absolute"
-                style={{ transform: `translate(${x}px, ${y}px)` }}
+                style={{
+                  left: p.x,
+                  top: p.y,
+                  width: 140,
+                  height: 200,
+                  transform: `rotate(${p.rotate}) scale(${p.scale})`,
+                  filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.7))',
+                }}
               >
-                <div
-                  className="w-10 h-20 rounded-t-full rounded-b-md border border-opacity-50"
-                  style={{ borderColor: color, backgroundColor: `${color}22` }}
-                />
-                <div className="w-8 h-4 mx-auto rounded-t-md" style={{ backgroundColor: color }} />
-              </div>
+                <div className="relative w-full h-full rounded-xl overflow-hidden border border-white/5">
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    className="object-contain bg-[#111]"
+                    sizes="140px"
+                  />
+                </div>
+              </motion.div>
             ))}
+
+            {/* Glow behind bottles */}
+            <div
+              className="absolute inset-0 -z-10 blur-3xl opacity-20"
+              style={{
+                background: 'radial-gradient(ellipse at center, #D4A843 0%, #4169E1 40%, #DC143C 80%, transparent 100%)',
+              }}
+            />
           </div>
         </div>
       </div>
 
+      {/* Left side — copy */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24 pb-16">
         <div className="max-w-2xl">
           <motion.span
