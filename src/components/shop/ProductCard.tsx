@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { ShoppingCart, MessageCircle } from 'lucide-react'
 import { formatPrice } from '@/lib/utils'
 
@@ -14,6 +15,7 @@ interface Product {
   price: number
   colorHex: string
   tags: string[]
+  images: string[]
 }
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -22,32 +24,21 @@ export default function ProductCard({ product }: { product: Product }) {
       {/* Image Area */}
       <Link href={`/shop/${product.slug}`} className="block relative">
         <div
-          className="h-52 w-full relative flex items-center justify-center overflow-hidden"
+          className="h-52 w-full relative overflow-hidden"
           style={{
             background: `radial-gradient(ellipse at center, ${product.colorHex}22 0%, #141414 70%)`,
           }}
         >
-          {/* Bottle Placeholder */}
-          <div className="relative flex flex-col items-center">
-            <div
-              className="w-14 h-28 rounded-t-full rounded-b-md border-2 border-opacity-40 flex items-end justify-center pb-2 relative overflow-hidden"
-              style={{ borderColor: product.colorHex, backgroundColor: '#0A0A0A' }}
-            >
-              <div
-                className="absolute inset-0 opacity-30"
-                style={{ backgroundColor: product.colorHex }}
-              />
-              <span className="relative font-oswald text-[8px] text-white text-center leading-tight px-1 uppercase">
-                QUANTUM
-                <br />
-                {product.name}
-              </span>
-            </div>
-            <div className="w-10 h-5 bg-[#D4A843] rounded-t-md -mt-px" />
-          </div>
+          <Image
+            src={product.images?.[0] || '/images/placeholder-product.jpg'}
+            alt={product.name}
+            fill
+            className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 640px) 50vw, 240px"
+          />
 
           {/* Badges */}
-          <div className="absolute top-2 left-2 flex gap-1 flex-wrap">
+          <div className="absolute top-2 left-2 flex gap-1 flex-wrap z-10">
             {product.tags.includes('bestseller') && (
               <span className="bg-[#D4A843] text-black text-[9px] font-oswald font-bold px-2 py-0.5 rounded-sm tracking-wider">
                 BEST SELLER
@@ -62,7 +53,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
           {/* Color dot */}
           <div
-            className="absolute bottom-2 right-2 w-4 h-4 rounded-full border border-white/20 shadow"
+            className="absolute bottom-2 right-2 w-4 h-4 rounded-full border border-white/20 shadow z-10"
             style={{ backgroundColor: product.colorHex }}
           />
         </div>
