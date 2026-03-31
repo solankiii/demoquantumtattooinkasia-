@@ -9,7 +9,7 @@
     "price": 1499,
     "description": "The darkest, most consistent lining black on the market. Smooth flow, clean lines every time. EU REACH compliant and gamma-sterilized for maximum safety.",
     "ingredients": "Aqua, Glycerin, CI 77266 (Black 2), Hamamelis Virginiana Water, Isopropyl Alcohol",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/01_Lining_Black.jpg"],
     "tags": ["bestseller", "essential"],
     "colorHex": "#0D0D0D"
   },
@@ -23,7 +23,7 @@
     "price": 1499,
     "description": "A rich, deep black designed for bold lining and solid packing. EU REACH Compliant, vegan, and sterilized. Quantum Tattoo Ink's Bitchin Black is a deep, rich black.",
     "ingredients": "Aqua, Glycerin, CI 77266, Isopropyl Alcohol, Hamamelis Virginiana Water",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/02_Bitchin_Black.jpg"],
     "tags": ["bestseller"],
     "colorHex": "#111111"
   },
@@ -37,7 +37,7 @@
     "price": 1499,
     "description": "Pure pigment, zero compromise. True Black delivers unparalleled depth and heals jet black every time. A staple for any serious artist.",
     "ingredients": "Aqua, Glycerin, CI 77266, Isopropyl Alcohol",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/03_True_Black.jpeg"],
     "tags": ["essential"],
     "colorHex": "#0A0A0A"
   },
@@ -51,7 +51,7 @@
     "price": 1399,
     "description": "Perfect for subtle shading and watercolor-style work. Heals smooth with no patchiness. The lightest of our gray wash range.",
     "ingredients": "Aqua, Glycerin, CI 77266, Isopropyl Alcohol",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/04_Light_Gray_Wash.jpg"],
     "tags": ["shading"],
     "colorHex": "#C0C0C0"
   },
@@ -65,7 +65,7 @@
     "price": 1399,
     "description": "The go-to mid-tone for any gray wash or black-and-grey piece. Consistent, smooth, and perfectly formulated.",
     "ingredients": "Aqua, Glycerin, CI 77266, Isopropyl Alcohol",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/05_Medium_Gray_Wash.jpg"],
     "tags": ["shading"],
     "colorHex": "#808080"
   },
@@ -79,7 +79,7 @@
     "price": 1399,
     "description": "Deep, rich gray for bold shadows and contrast work. Bridges the gap between medium gray and solid black.",
     "ingredients": "Aqua, Glycerin, CI 77266, Isopropyl Alcohol",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/06_Dark_Gray_Wash.jpg"],
     "tags": ["shading"],
     "colorHex": "#404040"
   },
@@ -93,7 +93,7 @@
     "price": 1499,
     "description": "A vivid, electric green that packs a punch. EU REACH compliant. Perfect for color realism and neo-traditional work.",
     "ingredients": "Aqua, Glycerin, CI 74260, CI 11741",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/07_Nuclear_Green.webp"],
     "tags": ["bestseller", "vibrant"],
     "colorHex": "#39FF14"
   },
@@ -107,7 +107,7 @@
     "price": 1499,
     "description": "Deep, lush green perfect for botanical tattoos and nature-inspired work. Rich pigment that heals true.",
     "ingredients": "Aqua, Glycerin, CI 74260",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/08_Forest_Green.jpg"],
     "tags": [],
     "colorHex": "#228B22"
   },
@@ -121,7 +121,7 @@
     "price": 1499,
     "description": "Bold, saturated red with excellent color retention. EU REACH compliant. The definitive red for traditional and neo-traditional styles.",
     "ingredients": "Aqua, Glycerin, CI 12070, CI 12315",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/09_Crimson_Red.jpg"],
     "tags": ["bestseller"],
     "colorHex": "#DC143C"
   },
@@ -135,7 +135,7 @@
     "price": 1499,
     "description": "A bright, fire-engine red that stays vibrant. Perfect for roses, flames, and bold color work.",
     "ingredients": "Aqua, Glycerin, CI 12070",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/10_Scarlet_Red.jpg"],
     "tags": [],
     "colorHex": "#FF2400"
   },
@@ -149,7 +149,7 @@
     "price": 1499,
     "description": "Rich, deep blue with incredible saturation. Heals true and bright. A must-have for color realism and portraiture.",
     "ingredients": "Aqua, Glycerin, CI 74160",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/11_Royal_Blue.jpg"],
     "tags": ["bestseller"],
     "colorHex": "#4169E1"
   },
@@ -163,7 +163,7 @@
     "price": 1499,
     "description": "Vivid electric blue for watercolor effects and color realism. Bright, consistent, and EU REACH compliant.",
     "ingredients": "Aqua, Glycerin, CI 74160, CI 74180",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/12_Electric_Blue.jpeg"],
     "tags": ["vibrant"],
     "colorHex": "#00BFFF"
   },
@@ -177,7 +177,7 @@
     "price": 1499,
     "description": "Deep, rich violet that heals beautifully. Perfect for shading purple tones in realistic and neo-traditional work.",
     "ingredients": "Aqua, Glycerin, CI 74160, CI 12070",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/14_Violet_Purple.jpg"],
     "tags": [],
     "colorHex": "#8B00FF"
   },
@@ -191,7 +191,7 @@
     "price": 1499,
     "description": "Bright, warm yellow with excellent opacity. Perfect for highlights and bold color work. Heals vibrant and true.",
     "ingredients": "Aqua, Glycerin, CI 11741",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/15_Sunburst_Yellow.jpeg"],
     "tags": ["vibrant"],
     "colorHex": "#FFD700"
   },
@@ -205,7 +205,7 @@
     "price": 1499,
     "description": "Bold, fiery orange with exceptional pigment load. Ideal for traditional Japanese and neo-traditional styles.",
     "ingredients": "Aqua, Glycerin, CI 12070, CI 11741",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/16_Tiger_Orange.jpeg"],
     "tags": [],
     "colorHex": "#FF6B00"
   },
@@ -219,7 +219,7 @@
     "price": 1499,
     "description": "Soft, feminine pink with a warm undertone. Perfect for floral work and color realism. Heals smooth and consistent.",
     "ingredients": "Aqua, Glycerin, CI 12070, Titanium Dioxide",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/17_Flamingo_Pink.jpg"],
     "tags": [],
     "colorHex": "#FF69B4"
   },
@@ -233,7 +233,7 @@
     "price": 1399,
     "description": "Pure, bright white for highlights, linework, and mixing. High-opacity formula that heals opaque.",
     "ingredients": "Aqua, Glycerin, Titanium Dioxide (CI 77891)",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/18_Titanium_White.webp"],
     "tags": ["essential"],
     "colorHex": "#FFFFFF"
   },
@@ -247,7 +247,7 @@
     "price": 4999,
     "description": "The complete gray wash solution. Light, Medium, Dark, and Lining Black in one set. Perfect for artists who want to master black and grey.",
     "ingredients": "See individual bottles",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/20_Gray_Wash_Set_4_Bottles.png"],
     "tags": ["bestseller", "set"],
     "colorHex": "#808080"
   },
@@ -261,7 +261,7 @@
     "price": 9999,
     "description": "Everything a color artist needs to get started with Quantum. 8 essential colors hand-picked by our artist team. Includes carry case.",
     "ingredients": "See individual bottles",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/21_Starter_Color_Set_8_Bottles.png"],
     "tags": ["bestseller", "set"],
     "colorHex": "#D4A843"
   },
@@ -275,7 +275,7 @@
     "price": 14999,
     "description": "The full professional arsenal. 12 hand-selected inks covering the complete spectrum. For the artist who accepts no compromise.",
     "ingredients": "See individual bottles",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/22_Master_Collection_12_Bottles.jpg"],
     "tags": ["set", "premium"],
     "colorHex": "#D4A843"
   },
@@ -289,7 +289,7 @@
     "price": 899,
     "description": "Nourishing aftercare balm formulated specifically for fresh tattoos. Accelerates healing and preserves color vibrancy. Vegan and fragrance-free.",
     "ingredients": "Shea Butter, Aloe Vera, Vitamin E, Jojoba Oil",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/23_Aftercare_Balm.jpeg"],
     "tags": ["aftercare"],
     "colorHex": "#F5CBA7"
   },
@@ -303,7 +303,7 @@
     "price": 1299,
     "description": "Lightweight, fast-absorbing lotion for the healing phase. Keeps tattoos moisturized and prevents scabbing. Dermatologist tested.",
     "ingredients": "Aqua, Aloe Barbadensis Gel, Glycerin, Allantoin",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/24_Healing_Lotion.jpg"],
     "tags": ["aftercare"],
     "colorHex": "#FDEBD0"
   },
@@ -317,7 +317,7 @@
     "price": 699,
     "description": "The industry-standard mixing solution. Use Holy Water to thin inks, create custom washes, and achieve the perfect consistency for any technique.",
     "ingredients": "Purified Water, Witch Hazel, Glycerin",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/25_Holy_Water_Mixing_Solution.jpg"],
     "tags": ["essential", "mixing"],
     "colorHex": "#E8F4FD"
   },
@@ -331,7 +331,7 @@
     "price": 1499,
     "description": "A cool, clear aqua blue perfect for ocean-inspired work and soft watercolor effects. Heals smooth and vibrant.",
     "ingredients": "Aqua, Glycerin, CI 74160",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/13_Aqua_Blue.jpg"],
     "tags": [],
     "colorHex": "#00FFFF"
   },
@@ -345,7 +345,7 @@
     "price": 1499,
     "description": "Soft, delicate lavender for floral work and soft color realism. A crowd favorite for its gentle, healed look.",
     "ingredients": "Aqua, Glycerin, CI 74160, Titanium Dioxide",
-    "images": ["/images/placeholder-product.jpg"],
+    "images": ["/images/products/19_Lavender_Mist.webp"],
     "tags": [],
     "colorHex": "#E6E6FA"
   }
