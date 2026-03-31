@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "name": "Priya Sharma",
+    "studio": "Sacred Skin Studio",
+    "city": "Delhi",
+    "quote": "We switched our entire studio to Quantum 6 months ago. The color retention is insane — clients come back and the tattoos still look fresh.",
+    "role": "Studio Owner",
+    "rating": 5
+  },
+  {
+    "id": "2",
+    "name": "Aditya Verma",
+    "studio": "Black Needle Studio",
+    "city": "Mumbai",
+    "quote": "The Gold Label range changed my work completely. Healing is so much better and clients are happier. Worth every rupee.",
+    "role": "Head Artist",
+    "rating": 5
+  },
+  {
+    "id": "3",
+    "name": "Kavya Reddy",
+    "studio": "Inkwell Tattoo",
+    "city": "Hyderabad",
+    "quote": "I was skeptical about switching brands, but Quantum's vegan formula actually makes my clients more comfortable. Business has grown 30% since we switched.",
+    "role": "Studio Owner",
+    "rating": 5
+  },
+  {
+    "id": "4",
+    "name": "Sameer Khan",
+    "studio": "The Tattoo Lab",
+    "city": "Bangalore",
+    "quote": "Finally an ink that works with Indian skin tones. The colors pop beautifully on darker skin — something many inks fail at.",
+    "role": "Senior Artist",
+    "rating": 5
+  },
+  {
+    "id": "5",
+    "name": "Alex Chen",
+    "studio": "Ink & Co. Studio",
+    "city": "Singapore",
+    "quote": "Quantum's quality and consistency are unmatched. The bulk program has streamlined our supplies and boosted our bottom line.",
+    "role": "Founder, Ink & Co. Studio",
+    "rating": 5
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "name": "Rahul Mehta",
+    "studio": "Ink District Mumbai",
+    "city": "Mumbai",
+    "instagram": "@inkdistrict.mumbai",
+    "bio": "Specializing in hyper-realism and portrait tattoos with 8+ years of experience. Featured in Mumbai Ink Festival 2024.",
+    "quote": "Quantum's color consistency is unmatched. Once I switched, I never looked back.",
+    "speciality": "Hyper-realism & Portraits"
+  },
+  {
+    "id": "2",
+    "name": "Priya Nair",
+    "studio": "Sacred Skin Studio",
+    "city": "Bangalore",
+    "instagram": "@sacredskin.blr",
+    "bio": "Award-winning neo-traditional artist known for intricate floral and botanical designs. 6 years tattooing.",
+    "quote": "The Gold Label inks are everything. My florals have never looked so alive.",
+    "speciality": "Neo-Traditional & Botanicals"
+  },
+  {
+    "id": "3",
+    "name": "Arjun Kapoor",
+    "studio": "Black Lotus Tattoo",
+    "city": "Delhi",
+    "instagram": "@blacklotus.delhi",
+    "bio": "Black and grey specialist with a passion for Japanese and blackwork. Over 10 years in the industry.",
+    "quote": "The gray wash set is my daily driver. Quantum just gets it right.",
+    "speciality": "Black & Grey / Japanese"
+  },
+  {
+    "id": "4",
+    "name": "Sneha Kulkarni",
+    "studio": "Mandala Ink",
+    "city": "Pune",
+    "instagram": "@mandalaink.pune",
+    "bio": "Mandala and geometric specialist creating sacred geometry tattoos. Known for precision and clean linework.",
+    "quote": "Lining Black is the only black I use. The flow is absolutely perfect.",
+    "speciality": "Mandala & Geometric"
+  },
+  {
+    "id": "5",
+    "name": "Vikram Singh",
+    "studio": "Goa Tattoo Collective",
+    "city": "Goa",
+    "instagram": "@goatattoocollective",
+    "bio": "Watercolor and abstract artist based in the beach capital. Tattoos over 400 tourists and locals yearly.",
+    "quote": "My watercolor pieces pop so much more with Quantum's pigment load.",
+    "speciality": "Watercolor & Abstract"
+  },
+  {
+    "id": "6",
+    "name": "Ananya Das",
+    "studio": "Kolkata Ink House",
+    "city": "Kolkata",
+    "instagram": "@kolkatainkhouse",
+    "bio": "Traditional and tribal specialist drawing inspiration from Bengali folk art and cultural heritage.",
+    "quote": "These inks respect the skin. My clients heal faster and the colors stay true.",
+    "speciality": "Traditional & Tribal"
+  },
+  {
+    "id": "7",
+    "name": "Rohan Iyer",
+    "studio": "Hyderabad Tattoo Studio",
+    "city": "Hyderabad",
+    "instagram": "@hyd.tattoo",
+    "bio": "Color realism and pop art specialist. Known for vibrant, detailed pieces that look like paintings.",
+    "quote": "Electric Blue and Crimson Red are straight fire. My clients can't believe the vibrancy.",
+    "speciality": "Color Realism & Pop Art"
+  },
+  {
+    "id": "8",
+    "name": "Meera Joshi",
+    "studio": "Pink City Tattoos",
+    "city": "Jaipur",
+    "instagram": "@pinkcitytattoos",
+    "bio": "Fine line and minimalist artist creating delicate, elegant tattoos with razor-sharp precision.",
+    "quote": "For fine line work, the Lining Black's consistency is just unreal. It never bleeds.",
+    "speciality": "Fine Line & Minimalism"
+  }
+]

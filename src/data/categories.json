@@ -1,0 +1,7 @@
+[
+  { "id": "1", "name": "Gold Label", "slug": "gold-label", "description": "EU REACH Compliant premium inks", "productCount": 45 },
+  { "id": "2", "name": "Originals", "slug": "originals", "description": "The classic Quantum lineup", "productCount": 60 },
+  { "id": "3", "name": "Gray Wash", "slug": "gray-wash", "description": "From subtle shading to bold contrast", "productCount": 12 },
+  { "id": "4", "name": "Aftercare", "slug": "aftercare", "description": "Post-tattoo healing products", "productCount": 5 },
+  { "id": "5", "name": "Mixing Solutions", "slug": "mixing-solutions", "description": "Holy Water and custom blending", "productCount": 3 }
+]
