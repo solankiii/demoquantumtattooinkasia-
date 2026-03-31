@@ -94,32 +94,35 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => (
-              <div key={link.label} className="relative">
+              <div
+                key={link.label}
+                className="relative"
+                onMouseEnter={() => link.dropdown && setActiveDropdown(link.label)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
                 {link.dropdown ? (
                   <>
                     <button
-                      onMouseEnter={() => setActiveDropdown(link.label)}
-                      onMouseLeave={() => setActiveDropdown(null)}
+                      onClick={() => setActiveDropdown(activeDropdown === link.label ? null : link.label)}
                       className="flex items-center gap-1 px-3 py-2 font-inter text-xs font-medium text-[#B0B0B0] hover:text-white tracking-wider uppercase transition-colors"
                     >
                       {link.label}
                       <ChevronDown size={12} className={`transition-transform ${activeDropdown === link.label ? 'rotate-180' : ''}`} />
                     </button>
                     {activeDropdown === link.label && (
-                      <div
-                        onMouseEnter={() => setActiveDropdown(link.label)}
-                        onMouseLeave={() => setActiveDropdown(null)}
-                        className="absolute top-full left-0 mt-1 w-52 bg-[#141414] border border-[#2A2A2A] rounded-lg shadow-2xl overflow-hidden z-50"
-                      >
-                        {link.dropdown.map((item) => (
-                          <Link
-                            key={item.label}
-                            href={item.href}
-                            className="block px-4 py-3 text-xs font-inter text-[#B0B0B0] hover:text-white hover:bg-[#1A1A1A] hover:pl-5 transition-all border-b border-[#1A1A1A] last:border-0"
-                          >
-                            {item.label}
-                          </Link>
-                        ))}
+                      <div className="absolute top-full left-0 pt-1 w-52 z-50">
+                        <div className="bg-[#141414] border border-[#2A2A2A] rounded-lg shadow-2xl overflow-hidden">
+                          {link.dropdown.map((item) => (
+                            <Link
+                              key={item.label}
+                              href={item.href}
+                              onClick={() => setActiveDropdown(null)}
+                              className="block px-4 py-3 text-xs font-inter text-[#B0B0B0] hover:text-white hover:bg-[#1A1A1A] hover:pl-5 transition-all border-b border-[#1A1A1A] last:border-0"
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </>

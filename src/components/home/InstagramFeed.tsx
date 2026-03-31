@@ -1,15 +1,58 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Instagram } from 'lucide-react'
+import { Instagram, Heart, MessageCircle } from 'lucide-react'
+import Image from 'next/image'
 
-const gradients = [
-  'from-[#DC143C]/30 to-[#8B0000]/10',
-  'from-[#D4A843]/30 to-[#8B6914]/10',
-  'from-[#4169E1]/30 to-[#00008B]/10',
-  'from-[#25D366]/30 to-[#006400]/10',
-  'from-[#8B00FF]/30 to-[#4B0082]/10',
-  'from-[#FF6B00]/30 to-[#8B3A00]/10',
+const posts = [
+  {
+    id: 1,
+    image: 'https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=400&h=400&fit=crop',
+    likes: '2.4k',
+    comments: '38',
+    caption: 'Gold Label precision — every drop counts. 🖤 #QuantumInk #TattooArtist',
+    href: 'https://instagram.com/quantuminksasia',
+  },
+  {
+    id: 2,
+    image: 'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400&h=400&fit=crop',
+    likes: '1.8k',
+    comments: '52',
+    caption: 'Color that stays. Art that lasts. 🎨 #QuantumInksAsia #TattooInk',
+    href: 'https://instagram.com/quantuminksasia',
+  },
+  {
+    id: 3,
+    image: 'https://images.unsplash.com/photo-1590246814883-57764c25c7b2?w=400&h=400&fit=crop',
+    likes: '3.1k',
+    comments: '74',
+    caption: 'From USA to Asia — the gold standard in vegan ink 🌏 #QuantumTattoo',
+    href: 'https://instagram.com/quantuminksasia',
+  },
+  {
+    id: 4,
+    image: 'https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?w=400&h=400&fit=crop',
+    likes: '2.9k',
+    comments: '61',
+    caption: 'Gray wash perfection. Shading like never before. #GrayWash #QuantumInk',
+    href: 'https://instagram.com/quantuminksasia',
+  },
+  {
+    id: 5,
+    image: 'https://images.unsplash.com/photo-1542856204-00101eb6def4?w=400&h=400&fit=crop',
+    likes: '1.6k',
+    comments: '29',
+    caption: 'The crew that makes it happen. 🤝 #RoadCrew #QuantumInksAsia',
+    href: 'https://instagram.com/quantuminksasia',
+  },
+  {
+    id: 6,
+    image: 'https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=400&h=400&fit=crop',
+    likes: '4.2k',
+    comments: '93',
+    caption: 'EU REACH compliant. Artist approved. 💉 #GoldLabel #QuantumTattoo',
+    href: 'https://instagram.com/quantuminksasia',
+  },
 ]
 
 export default function InstagramFeed() {
@@ -41,22 +84,46 @@ export default function InstagramFeed() {
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {gradients.map((grad, i) => (
-            <motion.div
-              key={i}
+          {posts.map((post, i) => (
+            <motion.a
+              key={post.id}
+              href={post.href}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.07 }}
-              className={`group aspect-square rounded-lg bg-gradient-to-br ${grad} border border-[#2A2A2A] relative overflow-hidden cursor-pointer hover:border-[#D4A843]/40 transition-all`}
+              className="group aspect-square rounded-lg border border-[#2A2A2A] relative overflow-hidden cursor-pointer hover:border-[#D4A843]/40 transition-all"
             >
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <Instagram size={24} className="text-white" />
+              <Image
+                src={post.image}
+                alt={post.caption}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 640px) 50vw, 33vw"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 px-4">
+                <div className="flex items-center gap-5 text-white">
+                  <span className="flex items-center gap-1.5 text-sm font-inter font-semibold">
+                    <Heart size={16} fill="white" />
+                    {post.likes}
+                  </span>
+                  <span className="flex items-center gap-1.5 text-sm font-inter font-semibold">
+                    <MessageCircle size={16} fill="white" />
+                    {post.comments}
+                  </span>
+                </div>
+                <p className="text-white text-[10px] font-inter text-center leading-relaxed line-clamp-2 opacity-80">
+                  {post.caption}
+                </p>
               </div>
-              <div className="absolute bottom-2 right-2 opacity-20">
-                <Instagram size={16} className="text-white" />
+              {/* Instagram icon watermark */}
+              <div className="absolute bottom-2 right-2 opacity-60 group-hover:opacity-0 transition-opacity">
+                <Instagram size={14} className="text-white drop-shadow" />
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
